@@ -9,3 +9,20 @@ own = int(input("Срок владения месяцев"))
 #Output
 print("Привет!", name, surname)
 print("Регион", region, "." , "Машина", car, "," , "год выпуска", year, "мощность" , hp, "лошадиных сил")
+# Функция расчета налоговой ставки в зависимости от мощности
+def tax(x):
+    print("Налог в год составляет" , x * hp)
+    print("Налог за время владения" , x * hp*(own/12))
+if ( hp >= 5 and hp < 100):
+    x = 12
+elif ( hp >= 100 and hp < 150):
+    x = 35
+elif(hp >150 and hp <200):
+    x = 45
+elif(hp >= 200 and hp <225 ):
+    x =55
+elif(hp >= 225 and hp <250 ):
+    x = 75
+elif(hp >= 250):
+    x = 150
+tax(x)
